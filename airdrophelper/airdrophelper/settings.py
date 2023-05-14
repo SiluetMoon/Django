@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'tailwind',
     'TailwindCSS',
     'django_browser_reload',
-    'main'
+    'main',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'airdrophelper.urls'
@@ -78,6 +80,8 @@ INTERNAL_IPS = [
 ]
 TAILWIND_APP_NAME = 'TailwindCSS'
 WSGI_APPLICATION = 'airdrophelper.wsgi.application'
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 
 # Database
